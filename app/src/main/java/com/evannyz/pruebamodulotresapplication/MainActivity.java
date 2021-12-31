@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initAllTextViews() {
-
         binding.tvSubtotal.setText("Sub Total: $0");
         binding.tvTotal.setText("Total: $0.0");
     }
