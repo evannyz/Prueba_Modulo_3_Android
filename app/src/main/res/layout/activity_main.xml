@@ -6,6 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/tv_titulo_app"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/icon_mistico"
+        android:drawableTint="@android:color/holo_orange_light"
+        android:fontFamily="@font/burgfest"
+        android:gravity="center"
+        android:text="El Bajón Místico"
+        android:textSize="36dp"
+        android:textColor="#FFC107"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_productos"
         android:layout_width="match_parent"
@@ -13,38 +28,55 @@
         app:layout_constraintBottom_toTopOf="@+id/ll_subtotal_total"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/elementos_lista_productos_layout"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:listitem="@layout/elementos_lista_productos_layout" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/ll_subtotal_total"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        >
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_subtotal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:text="Subtotal"
-            android:textSize="20dp"
+            android:textSize="30dp"
+            android:textColor="#FFC107"
+            android:fontFamily="@font/insanibu"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            />
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Subtotal" />
+
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_total"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:text="Total"
             android:textSize="36dp"
+            android:fontFamily="@font/insanibu"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            />
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Total" />
     </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:text="Selección de productos:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fontFamily="@font/burgfest"
+       app:layout_constraintTop_toBottomOf="@id/tv_titulo_app"
+        tools:layout_editor_absoluteX="176dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
